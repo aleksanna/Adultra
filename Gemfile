@@ -16,8 +16,6 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use haml
 gem 'haml'
-# Use install_theme
-gem 'install_theme'
 # Use react as the JavaScript library
 gem 'react-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
