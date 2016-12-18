@@ -10,6 +10,32 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *=
  *= require_self
+ *=
  */
+
+// BASE
+@import "css/main.css";
+@import 'css/base/fonts';
+@import 'css/base/normalize';
+@import 'css/base/vars';
+@import 'css/base/selection-colors';
+@import 'css/base/body-element';
+
+
+// LAYOUTS
+@import 'css/layouts/grid';
+
+
+// MODULES
+@import 'css/modules/device-notification';
+@import 'css/modules/section';
+@import 'css/modules/header';
+@import 'css/modules/side-nav';
+@import 'css/modules/intro';
+@import 'css/modules/work';
+@import 'css/modules/about';
+@import 'css/modules/contact';
+@import 'css/modules/hire';
+@import 'css/modules/outer-nav';
