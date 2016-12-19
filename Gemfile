@@ -30,8 +30,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'less-rails-bootstrap', '~> 3.0'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 gem 'therubyracer'
+gem 'hammerjs-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
