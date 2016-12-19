@@ -14,4 +14,5 @@
 //= require react
 //= require react_ujs
 //= require turbolinks
+//= require hammer
 //= require_tree .
