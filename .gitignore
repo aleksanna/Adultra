@@ -17,4 +17,6 @@
 
 /db/migrate/
 
+/public/assets/*
+
 Gemfile.lock
