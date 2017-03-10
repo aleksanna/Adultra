@@ -11,14 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170309213934) do
+ActiveRecord::Schema.define(version: 20170310172108) do
+
+  create_table "milestones", force: :cascade do |t|
+    t.datetime "complete_by"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.integer  "user_id",     limit: 4
+    t.integer  "skill_id",    limit: 4
+  end
+
+  add_index "milestones", ["skill_id"], name: "fk_rails_7718e2a375", using: :btree
+  add_index "milestones", ["user_id"], name: "fk_rails_56886b3a4d", using: :btree
 
   create_table "skills", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.integer  "age",        limit: 4
-    t.boolean  "done"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "name",        limit: 255
+    t.integer  "age",         limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "description", limit: 255
   end
 
   create_table "users", force: :cascade do |t|
@@ -28,4 +39,6 @@ ActiveRecord::Schema.define(version: 20170309213934) do
     t.datetime "updated_at",             null: false
   end
 
+  add_foreign_key "milestones", "skills"
+  add_foreign_key "milestones", "users"
 end
