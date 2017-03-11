@@ -1,7 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  complete_by: 2017-03-10 12:20:54
+  skill_id: 1
+  complete_by: 2017-03-10 19:29:56
+  user_id: 
 
 two:
-  complete_by: 2017-03-10 12:20:54
+  skill_id: 1
+  complete_by: 2017-03-10 19:29:56
+  user_id: 
