@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170311010837) do
+ActiveRecord::Schema.define(version: 20170311011632) do
 
   create_table "milestones", force: :cascade do |t|
     t.datetime "complete_by"
@@ -33,6 +33,16 @@ ActiveRecord::Schema.define(version: 20170311010837) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
+
+  create_table "skillsets", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "skill_id",   limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "skillsets", ["skill_id"], name: "index_skillsets_on_skill_id", using: :btree
+  add_index "skillsets", ["user_id"], name: "index_skillsets_on_user_id", using: :btree
 
   create_table "timelines", force: :cascade do |t|
     t.datetime "start"
@@ -58,5 +68,7 @@ ActiveRecord::Schema.define(version: 20170311010837) do
   add_foreign_key "milestones", "skills"
   add_foreign_key "milestones", "timelines"
   add_foreign_key "milestones", "users"
+  add_foreign_key "skillsets", "skills"
+  add_foreign_key "skillsets", "users"
   add_foreign_key "timelines", "users"
 end
